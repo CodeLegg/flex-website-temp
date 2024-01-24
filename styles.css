@@ -6,7 +6,7 @@
   --third-color: #cf323e;  
   --fourth-color: #3a3a3a;
  
-  --dark-third-color: rgb(161, 40, 50); 
+  --dark-third-color: rgb(160, 24, 41, 0.6); 
 }
 
 *,
@@ -230,12 +230,13 @@ body {
 /*------------------------------*\
 ¦---NAVBAR-LINK-HOVER-&-ACTIVE---¦
 \*------------------------------*/
-.navbar-link:hover {
+.navbar-list-item:hover {
   background-color: var(--third-color);
 }
-.navbar-link.active {
+.navbar-list-item.active {
   background-color: var(--third-color);
 }
+
 
 
 @media(min-width: 431px){
@@ -253,14 +254,14 @@ body {
 /*--------------------*\
 ¦---CONTAINER-SIZING---¦
 \*--------------------*/
-  .container{
-    padding-right: 75px;
-    padding-left: 75px;
-  }
+.top-header.container {
+  margin: 0 auto;
+}
+
  
   .bottom-header > .container {
-    padding-right: 50px;
-    padding-left: 50px;
+    width: auto;
+    margin: 0 auto;
   }
 
 /*-----------------*\
@@ -271,7 +272,12 @@ body {
   }
 
   .header-btn{
-    
+  color: var(--secondary-color);
+  background-color: var(--third-color);
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 20px;
+  flex-basis: 150px;
   }
 
 /*----------------*\
@@ -305,6 +311,7 @@ body {
 \*-------------------------*/
   .bottom-header {
     background-color: var(--third-color);
+    box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.5);
   }
 
 /*--------------------*\
@@ -314,7 +321,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /*--------------------*\
@@ -327,7 +333,22 @@ padding: 5px;
 text-align: center;
 }
 
+/*------------------------------*\
+¦---NAVBAR-LINK-HOVER-&-ACTIVE---¦
+\*------------------------------*/
+.navbar-list-item:hover {
+  background-color: var(--dark-third-color);
+}
+.navbar-list-item.active {
+  background-color: var(--secondary-color);
+  
+}
 
+
+.navbar-list-item a.active{
+    color: var(--primary-color);
+   
+  }
 .navbar-list-item a{
     color: var(--secondary-color);
     font-size: 16px;
@@ -349,14 +370,13 @@ text-align: center;
 ¦---CONTAINER-SIZING---¦
 \*--------------------*/
 
-.container{
-  padding-right: 75px;
-  padding-left: 75px;
+.top-header.container {
+  margin: 0 auto;
 }
 
 .bottom-header > .container {
-    max-width: 1440px;
-    margin: 0 auto;
+  width: auto;
+  margin: 0 auto;
 }
 
 /*--------------------*\
@@ -386,15 +406,22 @@ text-align: center;
 ¦---CONTAINER-SIZING---¦
 \*--------------------*/
   .container{
-    max-width: 2250px;
+    max-width: 1800px;
     margin: 0 auto;
   }
 
   .bottom-header > .container {
-    max-width: 1440px;
+    max-width: 1800px;
     margin: 0 auto;
   }
 
+/*-----------------*\
+¦--------LOGO-------¦
+\*-----------------*/
+
+.brand {
+  width: 175px;
+}
 
 /*--------------------*\
 ¦---NAVBAR-LIST-ITEM---¦
