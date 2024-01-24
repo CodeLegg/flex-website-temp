@@ -76,6 +76,17 @@ body {
   font-size: 1.6rem;
 }
 
+/*---------------------*\
+¦-----STICKY-HEADER-----¦
+\*---------------------*/
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -138,7 +149,7 @@ body {
 \*-----------------*/
 
 .brand {
-  width: 150px;
+  width: 200px;
 }
 
 /*-----------------*\
@@ -186,7 +197,7 @@ body {
 .bottom-mobile-menu {
   background-color: var(--primary-color);
   position: fixed;
-  top: 99px;
+  top: 118px;
   left: -999px;
   width: 100%;
   min-height: 100%;
@@ -238,6 +249,30 @@ body {
 }
 
 
+/*------------------------*\
+¦---SECTION-CLASS-STYLES---¦
+\*------------------------*/
+main{
+  margin-top: 50px;
+}
+
+section{
+  height: 100vh;
+  background-color: #cf323e;
+  color: #fcfbfc;
+  font-size: 40px;
+  padding-inline: 25px;
+  padding-block: 25px;
+  text-align: center;
+}
+
+.section-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
 
 @media(min-width: 431px){
 .phone-icon{
@@ -257,7 +292,13 @@ body {
 .top-header.container {
   margin: 0 auto;
 }
+body > header > div > div > button:nth-child(5){
+/* this pushes button to align left */
 
+/* margin-left: auto; */ 
+
+order: -1;
+}
  
   .bottom-header > .container {
     width: auto;
@@ -274,11 +315,20 @@ body {
   .header-btn{
   color: var(--secondary-color);
   background-color: var(--third-color);
-  padding: 10px 30px;
+  padding: 10px 10px;
   border-radius: 50px;
   font-size: 20px;
   flex-basis: 150px;
+  letter-spacing: 1px;
   }
+
+  .btn-2{
+    /* margin-right: 20px; */
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+ 
 
 /*----------------*\
 ¦---MOBILE-ICONS---¦
@@ -311,7 +361,7 @@ body {
 \*-------------------------*/
   .bottom-header {
     background-color: var(--third-color);
-    box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.3);
   }
 
 /*--------------------*\
@@ -420,7 +470,7 @@ text-align: center;
 \*-----------------*/
 
 .brand {
-  width: 175px;
+  width: 225px;
 }
 
 /*--------------------*\
