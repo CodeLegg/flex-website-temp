@@ -85,6 +85,14 @@ header{
   left: 0;
   width: 100%;
 }
+.bottom-mobile-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 300ms ease-in-out;
+}
 
 
 ::-webkit-scrollbar {
@@ -149,7 +157,7 @@ header{
 \*-----------------*/
 
 .brand {
-  width: 200px;
+  width: 150px;
 }
 
 /*-----------------*\
@@ -197,7 +205,7 @@ header{
 .bottom-mobile-menu {
   background-color: var(--primary-color);
   position: fixed;
-  top: 118px;
+  top: 99px;
   left: -999px;
   width: 100%;
   min-height: 100%;
@@ -315,9 +323,9 @@ order: -1;
   .header-btn{
   color: var(--secondary-color);
   background-color: var(--third-color);
-  padding: 10px 10px;
-  border-radius: 50px;
-  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 18px;
   flex-basis: 150px;
   letter-spacing: 1px;
   }
@@ -433,23 +441,13 @@ text-align: center;
 ¦---NAVBAR-LIST-ITEM---¦
 \*--------------------*/  
 
-.navbar-list-item {
-  padding-block: 4px;
-}
-
-.navbar-list-item a{
-    color: var(--secondary-color);
-    font-size: 20px;
-    padding: 0;
-    padding-block: 4px;
-  }
-
   .navbar-list-item i {
     width: auto;
   }
 
 
 }
+
 @media (min-width: 1800px) {
 
 /*--------------------*\
@@ -465,28 +463,10 @@ text-align: center;
     margin: 0 auto;
   }
 
-/*-----------------*\
-¦--------LOGO-------¦
-\*-----------------*/
-
-.brand {
-  width: 225px;
-}
 
 /*--------------------*\
 ¦---NAVBAR-LIST-ITEM---¦
 \*--------------------*/  
-
-.navbar-list-item {
-  padding-block: 4px;
-}
-
-.navbar-list-item a{
-    color: var(--secondary-color);
-    font-size: 20px;
-    padding: 0;
-    padding-block: 4px;
-  }
 
   .navbar-list-item i {
     width: auto;
