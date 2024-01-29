@@ -94,7 +94,7 @@ body {
 /*---------------------*\
 ¦-----STICKY-HEADER-----¦
 \*---------------------*/
-header{
+.top-header{
   position: fixed;
   top: 0;
   left: 0;
@@ -102,11 +102,19 @@ header{
   z-index: 9999;
   transition: all 300ms ease-in-out;
 }
+.bottom-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  transition: all 300ms ease-in-out;
+}
 
 /*------------------------*\
 ¦---SCROLLING-HEADER-JS----¦
 \*------------------------*/
-.scroll-down header{
+.scroll-down .top-header{
   transform: translate3d(0, -100%, 0);
 }
 .scroll-up header{
@@ -300,6 +308,14 @@ section{
 
 @media (min-width: 1000px) {
 
+  .scroll-down .top-header{
+    transform: translate3d(0, 0, 0);
+  }
+
+  .scroll-down .bottom-header{
+    transform: translate3d(0, -100%, 0);
+  }
+
 /*--------------------*\
 ¦---CONTAINER-SIZING---¦
 \*--------------------*/
@@ -374,6 +390,7 @@ order: -1;
 ¦---DESKTOP-BOTTOM-HEADER---¦
 \*-------------------------*/
   .bottom-header {
+    top: 80px;
     background-color: var(--third-color);
     box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.3);
   }
