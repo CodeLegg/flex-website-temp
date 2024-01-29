@@ -49,5 +49,9 @@ for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
     mobileMenuDropdown.classList.toggle("active");
     mobileMenuBtn.classList.toggle("cross");
+    
+    navOverlay.classList.remove("active");
+    document.body.classList.remove("no-scroll", mobileMenuDropdown.classList.contains("active"));
+
   });
 }
