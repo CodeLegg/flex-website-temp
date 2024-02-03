@@ -18,6 +18,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*----------------------*\
+¦-----ELEMENT-STYLES-----¦
+\*----------------------*/
 
 li {
   list-style: none;
@@ -25,7 +28,6 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--secondary-color);
 }
 
 a,
@@ -84,6 +86,9 @@ section {
   height: 100vh;
 }
 
+/*-------------------------*\
+¦-----WEBSKIT-SCROLLBAR-----¦
+\*-------------------------*/
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -97,8 +102,59 @@ section {
   background-color: var(--secondary-color);
 }
 
+
+/*---------------------*\
+¦-----HOVER-CLASSES-----¦
+\*---------------------*/
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--mid-third-color);
+}
+
+.navbar-list-item:hover {
+  background-color: var(--mid-third-color);
+}
+
+.footer-icons li:hover {
+  background-color: var(--third-color);
+}
+
+.grid-item ul a:hover {
+  color: var(--third-color);
+}
+
+.hero-btn:hover {
+  background-color: var(--third-color);
+  }
+
+  .navbar-list-item:hover {
+    background-color: var(--third-color);
+  }
+
+/*-----------------------*\
+¦-----ACTIVE-CLASSES-----¦
+\*-----------------------*/
+
+.bottom-mobile-menu.active {
+  transform: translateX(999px);
+  visibility: visible;
+  transition: 0.5s;
+}
+
+.overlay.active {
+  opacity: 1;
+}
+
+.navbar-list-item.active {
+  background-color: var(--third-color);
+}
+
+.navbar-list-item.active {
+  background-color: var(--secondary-color);
+}
+
+.navbar-list-item a.active {
+  color: var(--primary-color);
 }
 /*----------------------------*\
 ¦-----STICKY-MOBILE-HEADER-----¦
@@ -146,9 +202,6 @@ section {
   pointer-events: none;
   transition: 0.35s ease;
 }
-.overlay.active {
-  opacity: 1;
-}
 
 /*----------------*\
 ¦----HEADER-BTN----¦
@@ -156,7 +209,6 @@ section {
 .buttons {
     display: none;
 }
-
 
 /*-----------------*\
 ¦-----CONTAINER-----¦
@@ -258,12 +310,6 @@ section {
   transition: 0.25s;
 }
 
-.bottom-mobile-menu.active {
-  transform: translateX(999px);
-  visibility: visible;
-  transition: 0.5s;
-}
-
 /*---------------------------*\
 ¦---BOTTOM-LINE-MOBILE-MENU---¦
 \*---------------------------*/
@@ -289,15 +335,6 @@ section {
   width: 30px;
 }
 
-/*------------------------------*\
-¦---NAVBAR-LINK-HOVER-&-ACTIVE---¦
-\*------------------------------*/
-.navbar-list-item:hover {
-  background-color: var(--third-color);
-}
-.navbar-list-item.active {
-  background-color: var(--third-color);
-}
 
 /*--------*\
 ¦---HERO---¦
@@ -324,9 +361,7 @@ section {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   letter-spacing: 3PX;
 }
-.hero-btn:hover {
-background-color: var(--third-color);
-}
+
 
 
 /*----------*\
@@ -396,6 +431,7 @@ footer {
 .footer-btn i {
   margin-left: auto;
 }
+
 
 /*--------------------*\
 ¦---FOOTER-BTN-ICONS---¦
@@ -505,12 +541,13 @@ footer {
 .footer-icons i {
   font-size: 20px;
   color: var(--secondary-color);
-  margin-top: 4px;
+  margin-top: 4px;}
+
 
   /*---------------------------*\
 ¦---FOOTER-ICONS-LIST-ITEMS---¦
 \*---------------------------*/
-}
+
 .footer-icons li {
   background-color: var(--fourth-color);
   width: 35px;
@@ -521,6 +558,7 @@ footer {
   border-radius: 20px;
   padding: 20px;
 }
+
 
 /*----------------------*\
 ¦----NAVBAR-ICON-SWITCH--¦
@@ -747,19 +785,6 @@ footer {
     text-align: center;
   }
 
-  /*------------------------------*\
-¦---NAVBAR-LINK-HOVER-&-ACTIVE---¦
-\*------------------------------*/
-  .navbar-list-item:hover {
-    background-color: var(--mid-third-color);
-  }
-  .navbar-list-item.active {
-    background-color: var(--secondary-color);
-  }
-
-  .navbar-list-item a.active {
-    color: var(--primary-color);
-  }
   .navbar-list-item a {
     color: var(--secondary-color);
     font-size: 16px;
