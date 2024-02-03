@@ -126,6 +126,13 @@ section {
   background-color: var(--third-color);
 }
 
+.footer-btn:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+
+
 /*-----------------------*\
 ¦-----ACTIVE-CLASSES-----¦
 \*-----------------------*/
@@ -144,13 +151,6 @@ section {
   background-color: var(--third-color);
 }
 
-.navbar-list-item.active {
-  background-color: var(--secondary-color);
-}
-
-.navbar-list-item a.active {
-  color: var(--primary-color);
-}
 /*----------------------------*\
 ¦-----STICKY-MOBILE-HEADER-----¦
 \*----------------------------*/
@@ -708,7 +708,7 @@ footer {
     /* margin-left: auto; */
     order: -1;
   }
-  /*----------------*\
+/*----------------*\
 ¦----HEADER-BTN----¦
 \*----------------*/
   .buttons {
@@ -729,6 +729,22 @@ footer {
     /* margin-right: 20px; */
     background-color: var(--secondary-color);
     color: var(--primary-color);
+  }
+  
+/*---------------------*\
+¦-----HOVER-CLASSES-----¦
+\*---------------------*/
+  
+.header-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+
+  }
+
+  .btn-2:hover {
+    /* margin-right: 20px; */
+    background-color: var(--third-color);
+    color: var(--secondary-color);
   }
 
   /*----------------*\
@@ -789,6 +805,14 @@ footer {
 
   .navbar-list-item i {
     width: auto;
+  }
+
+  .navbar-list-item.active {
+    background-color: var(--secondary-color);
+  }
+  
+  .navbar-list-item a.active {
+    color: var(--primary-color);
   }
 }
 
