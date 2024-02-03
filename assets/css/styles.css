@@ -153,8 +153,7 @@ section {
 /*----------------*\
 ¦----HEADER-BTN----¦
 \*----------------*/
-.top-header .container a[id="order"],
-.top-header .container a[href=""] {
+.buttons {
     display: none;
 }
 
@@ -684,8 +683,7 @@ footer {
 /*----------------*\
 ¦----HEADER-BTN----¦
 \*----------------*/
-.top-header .container a[id="order"],
-.top-header .container a[href=""] {
+.buttons{
     display: block;
 }
 
