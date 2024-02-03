@@ -1,5 +1,5 @@
 
-
+// MOBILE DROPDOWN MENU & TOGGLE BUTTON
 
 const mobileMenuBtn = document.querySelector(".hamburger");
 const mobileMenuDropdown = document.querySelector(".bottom-mobile-menu");
@@ -21,7 +21,7 @@ function toggleMenu() {
 
 
 
-
+// HEADER SCROLL
 const body = document.body;
 let lastScroll = 0;
 
@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
 })
 
 
-
+//  MOBILE DROP DOWN MENU
 const navbarLinks = document.querySelectorAll("[data-navbar-link]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
@@ -51,7 +51,32 @@ for (let i = 0; i < navbarLinks.length; i++) {
     mobileMenuBtn.classList.toggle("cross");
     
     navOverlay.classList.remove("active");
-    document.body.classList.remove("no-scroll", mobileMenuDropdown.classList.contains("active"));
+    
 
   });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Wait for the DOM to be fully loaded before attaching the event listener.
+
+  // Get the phone link element by its class name.
+  let phoneLink = document.querySelector('.phone-icon');
+
+  // Check if the phone link element exists.
+  if (phoneLink) {
+      // Attach a click event listener to the phone link.
+      phoneLink.addEventListener('click', function (event) {
+          // Prevent the default behavior of the anchor tag (preventing the navigation).
+          event.preventDefault();
+          
+          // Call the function with the desired phone number.
+          callPhoneNumber('+01904 900159');
+      });
+  }
+});
+
+function callPhoneNumber(phoneNumber) {
+  // Open the phone dialer with the specified phone number.
+  window.location.href = 'tel:' + phoneNumber;
 }
