@@ -343,7 +343,6 @@ section {
   position: relative;
 }
 
-
 /*----------------------*\
 ¦---CAROUSEL-LIST-ITEM---¦
 \*----------------------*/
@@ -405,7 +404,7 @@ section {
   content: "";
   position: absolute;
   top: 40px;
-  left:7%; /* Set left to 50% */
+  left: 7%; /* Set left to 50% */
   transform: translateX(-50%); /* Center the pseudo-element */
   width: 227px;
   max-width: 227px;
@@ -416,7 +415,6 @@ section {
   box-shadow: 0 5px 10px #000;
 }
 
-
 /*----------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
 \*----------------------------------------*/
@@ -424,8 +422,7 @@ section {
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 2px;
-    text-align: center;
-
+  text-align: center;
 }
 
 /*------------------------------------*\
@@ -435,8 +432,7 @@ section {
   font-weight: 900;
   font-size: 25px;
   letter-spacing: 5px;
-    text-align: center;
-
+  text-align: center;
 }
 
 /*--------------------------------------*\
@@ -458,8 +454,7 @@ section {
   font-size: 18px;
   letter-spacing: 0px;
   /* padding-right: 30%; */
-    text-align: center;
-
+  text-align: center;
 }
 
 /*------------------------*\
@@ -471,8 +466,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 10px;
-    text-align: center;
-
+  text-align: center;
 }
 
 .btn {
@@ -571,7 +565,6 @@ section {
 .arrows button {
   /* Add additional styling for your buttons if necessary */
   margin: 0 10px; /* Adjust the margin to control the space between buttons */
-  
 }
 
 .arrows .button {
@@ -665,7 +658,8 @@ section {
 
 @keyframes showThumbnail {
   to {
-    width: 100px;  }
+    width: 100px;
+  }
 }
 
 .carousel.next .thumbnail {
@@ -681,7 +675,7 @@ section {
 
 /* effect prev click */
 .carousel.prev .list .item:nth-child(2) {
-  z-index: 2;  
+  z-index: 2;
 }
 
 .carousel.prev .list .item:nth-child(2) img {
@@ -708,30 +702,29 @@ section {
   animation: showThumbnail 0.5s linear 1 forwards;
 }
 
-
 .carousel.prev .list .item:nth-child(2) .content-container,
 .carousel.prev .list .item:nth-child(2) .title,
 .carousel.prev .list .item:nth-child(2) .sub-title,
 .carousel.prev .list .item:nth-child(2) .topic,
 .carousel.prev .list .item:nth-child(2) .des,
-.carousel.prev .list .item:nth-child(2) .carousel-cta-btn{
+.carousel.prev .list .item:nth-child(2) .carousel-cta-btn {
   animation: contentOut 1.5s linear 1 forwards;
 }
 
 @keyframes contentOut {
-  to{
-transform: translateY(-150px);
-filter: blur(20px);
-opacity: 0;
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
   }
 }
 
 .carousel.next .arrows .button,
-.carousel.prev .arrows .button{
+.carousel.prev .arrows .button {
   pointer-events: none;
 }
 
-.time{
+.time {
   width: 0%;
   height: 3px;
   background-color: var(--third-color);
@@ -742,19 +735,18 @@ opacity: 0;
 }
 
 .carousel.next .time,
-.carousel.prev .time{
+.carousel.prev .time {
   width: 100%;
   animation: timeRunning 2s linear 1 forwards;
 }
 
 @keyframes timeRunning {
-  to{
+  to {
     width: 0;
   }
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 
 /*----------*\
 ¦---FOOTER---¦
@@ -1008,9 +1000,7 @@ footer {
   padding: 20px;
 }
 
-
 @media (min-width: 390px) {
-
   /*------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE---¦
 \*------------------------------------*/
@@ -1018,82 +1008,77 @@ footer {
     font-size: 50px;
   }
 
-  
-/*------------------------------------------*\
+  /*------------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE-AFTER---¦
 \*------------------------------------------*/
-.carousel .list .item .content .title::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left:0; /* Set left to 50% */
-  transform: translateX(-50%); /* Center the pseudo-element */
-  width: 267px;
-  max-width: 267px;
-  height: 5px;
-  transform: skew(-12deg);
-  background: var(--third-color);
-  z-index: 1;
-  box-shadow: 0 5px 10px #000;
-}
+  .carousel .list .item .content .title::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0; /* Set left to 50% */
+    transform: translateX(-50%); /* Center the pseudo-element */
+    width: 267px;
+    max-width: 267px;
+    height: 5px;
+    transform: skew(-12deg);
+    background: var(--third-color);
+    z-index: 1;
+    box-shadow: 0 5px 10px #000;
+  }
 
   /*----------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
 \*----------------------------------------*/
-.carousel .list .item .content .sub-title {
-  font-size: 25px;
-}
+  .carousel .list .item .content .sub-title {
+    font-size: 25px;
+  }
 
-/*------------------------------------*\
+  /*------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TOPIC---¦
 \*------------------------------------*/
-.carousel .list .item .content .topic {
-  font-size: 30px;
-}
+  .carousel .list .item .content .topic {
+    font-size: 30px;
+  }
 
-/*----------------------------------*\
+  /*----------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-DES---¦
 \*----------------------------------*/
-.carousel .list .item .content .des {
-  font-weight: 500;
-  font-size: 20px;
-  letter-spacing: 0px;
-  /* padding-right: 30%; */
-}
+  .carousel .list .item .content .des {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0px;
+    /* padding-right: 30%; */
+  }
 
-.carousel .list .item .content-container {
-  background-color: rgb(29, 27, 28, 0.7);
-  border-radius: 20px;
-  padding: 20px;
-}
+  .carousel .list .item .content-container {
+    background-color: rgb(29, 27, 28, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+  }
 
-
-/*------------------------------*\
+  /*------------------------------*\
 ¦---CAROUSEL-THUMBNAIL-CLASSES---¦
 \*------------------------------*/
 
-.thumbnail {
-  bottom: 70px;
-}
+  .thumbnail {
+    bottom: 70px;
+  }
 
-@keyframes outImage {
-  to {
-    width: 100px;
-    height: 135px;
-    border-radius: 10px;
-    left: 15px;
+  @keyframes outImage {
+    to {
+      width: 100px;
+      height: 135px;
+      border-radius: 10px;
+      left: 15px;
+      bottom: 70px;
+    }
+  }
+
+  .carousel.next .list .item:nth-child(1) img {
     bottom: 70px;
   }
 }
 
-.carousel.next .list .item:nth-child(1) img {
-
-  bottom: 70px;
-
-}
-}
- 
- 
 /*----------------------*\
 ¦----NAVBAR-ICON-SWITCH--¦
 \*----------------------*/
@@ -1114,12 +1099,7 @@ footer {
   .book-icon {
     display: block;
   }
-
 }
-
-
-
-
 
 /*--------------------------------------------*\
 ¦---LANDSCAPE-MOBILE-MENU-SCROLL-MEDIA-QUERY---¦
@@ -1215,86 +1195,77 @@ footer {
     width: 50%;
   }
 
-/*------------------------------*\
+  /*------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT---¦
 \*------------------------------*/
-.carousel .list .item .content {
-  position: absolute;
-  top: 20%;
-  width: 550px;
-  max-width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--secondary-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
-}
+  .carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 550px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  }
 
-    /*------------------------------------*\
+  /*------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE---¦
 \*------------------------------------*/
-.carousel .list .item .content .title {
-  font-size: 70px;
-}
+  .carousel .list .item .content .title {
+    font-size: 70px;
+  }
 
-
-/*------------------------------------------*\
+  /*------------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE-AFTER---¦
 \*------------------------------------------*/
-.carousel .list .item .content .title::after {
-  content: "";
-  top: 70px;
-  left: 167px;
-  width: 350px;
-  max-width: 390px;
+  .carousel .list .item .content .title::after {
+    content: "";
+    top: 70px;
+    left: 167px;
+    width: 350px;
+    max-width: 390px;
+  }
 
-}
-
-/*----------------------------------------*\
+  /*----------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
 \*----------------------------------------*/
-.carousel .list .item .content .sub-title {
-font-size: 35px;
+  .carousel .list .item .content .sub-title {
+    font-size: 35px;
+  }
 
-}
-
-/*------------------------------------*\
+  /*------------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-TOPIC---¦
 \*------------------------------------*/
-.carousel .list .item .content .topic {
-font-size: 40px;
+  .carousel .list .item .content .topic {
+    font-size: 40px;
+  }
 
-}
-
-/*----------------------------------*\
+  /*----------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT-DES---¦
 \*----------------------------------*/
-.carousel .list .item .content .des {
-font-weight: 500;
-font-size: 25px;
-letter-spacing: 0px;
-/* padding-right: 30%; */
+  .carousel .list .item .content .des {
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 0px;
+    /* padding-right: 30%; */
+  }
 
-}
-
-/*------------------------*\
+  /*------------------------*\
 ¦---CAROUSEL-BTN-CLASSES---¦
 \*------------------------*/
 
-.carousel-cta-btn {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+  .carousel-cta-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 
-
-
-
-/*------------------------------*\
+  /*------------------------------*\
 ¦---CAROUSEL-THUMBNAIL-CLASSES---¦
 \*------------------------------*/
 
-
-/* .thumbnail .item {
+  /* .thumbnail .item {
   width: 160px;
   height: 220px;
   flex-shrink: 0;
@@ -1317,8 +1288,6 @@ letter-spacing: 0px;
     bottom: 40px;
   }
 } */
-
-
 }
 
 /* Laptop / Desktop Screen Size */
@@ -1493,7 +1462,6 @@ letter-spacing: 0px;
   .navbar-list-item a.active {
     color: var(--primary-color);
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -1502,21 +1470,19 @@ letter-spacing: 0px;
     margin: 0 auto;
   }
 
-
-/*------------------------------*\
+  /*------------------------------*\
 ¦---CAROUSEL-LIST-ITEM-CONTENT---¦
 \*------------------------------*/
-.carousel .list .item .content {
-  position: absolute;
-  top: 20%;
-  width: 550px;
-  max-width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--secondary-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
-}
-  
+  .carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 550px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  }
 }
 
 /* Large Laptop / Desktop Screen Size */
@@ -1587,33 +1553,30 @@ letter-spacing: 0px;
     opacity: 0.7;
     z-index: 1;
 
-
-
-  /*--------------------*\
+    /*--------------------*\
 ¦---CONTAINER-SIZING---¦
 \*--------------------*/
-  .footer-wrapper .container {
-    padding-inline: 0;
-  }
+    .footer-wrapper .container {
+      padding-inline: 0;
+    }
 
-  .top-header.container {
-    margin: 0 auto;
-  }
+    .top-header.container {
+      margin: 0 auto;
+    }
 
-  .bottom-header > .container {
-    width: auto;
-    margin: 0 auto;
-  }
+    .bottom-header > .container {
+      width: auto;
+      margin: 0 auto;
+    }
 
-  /*--------------------*\
+    /*--------------------*\
 ¦---NAVBAR-LIST-ITEM---¦
 \*--------------------*/
 
-  .navbar-list-item i {
-    width: auto;
+    .navbar-list-item i {
+      width: auto;
+    }
   }
-
-}
 }
 /*  Deskstop Screen Size */
 @media (min-width: 1800px) {
