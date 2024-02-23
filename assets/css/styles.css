@@ -3,7 +3,7 @@
 :root {
   --primary-color: #1d1b1c;
   --secondary-color: #fcfbfc;
-  --third-color: #cf323e;
+  --third-color: #ec1d23;
   --fourth-color: #3a3a3a;
 
   --mid-third-color: rgb(186, 44, 55);
@@ -78,8 +78,9 @@ body {
   font-size: 1.6rem;
 }
 
+/* Remove later */
 main {
-  margin-top: 90px;
+  /* margin-top: 90px; */
 }
 
 section {
@@ -119,19 +120,17 @@ section {
 }
 
 .hero-btn:hover {
-  background-color: var(--third-color);
+  background-color: var(--mid-third-color);
 }
 
 .navbar-list-item:hover {
   background-color: var(--third-color);
 }
 
-.footer-btn:hover{
+.footer-btn:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
-
-
 
 /*-----------------------*\
 ¦-----ACTIVE-CLASSES-----¦
@@ -249,6 +248,7 @@ section {
 .brand {
   width: 200px;
   padding-block: 10px;
+  margin-left: auto;
 }
 
 /*-----------------*\
@@ -260,6 +260,7 @@ section {
   flex-basis: 30px;
   text-align: center;
   color: var(--secondary-color);
+  z-index: 200;
 }
 
 .book-icon {
@@ -329,32 +330,431 @@ section {
 .navbar-list-item i {
   width: 30px;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/*--------*\
-¦---HERO---¦
-\*--------*/
-.hero {
-  background-image: url("../images/hero-beard-man.jpg");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+/*---------------------------*\
+¦---SLIDING-CAROUSEL-IMAGES---¦
+\*---------------------------*/
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
-  z-index: 0;
 }
 
-.hero-btn {
-  font-size: 30px;
-  color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
-  padding: 10px 30px;
+
+/*----------------------*\
+¦---CAROUSEL-LIST-ITEM---¦
+\*----------------------*/
+.carousel .list .item {
   position: absolute;
-  top: 50%;
+  inset: 0 0 0 0;
+}
+
+/*--------------------------*\
+¦---CAROUSEL-LIST-ITEM-IMG---¦
+\*--------------------------*/
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .list .item img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65%;
+}
+
+/*------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT---¦
+\*------------------------------*/
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+}
+.carousel .list .item .content-container {
+  background-color: rgb(29, 27, 28, 0.7);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE---¦
+\*------------------------------------*/
+.carousel .list .item .content .title {
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+}
+
+/*------------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE-AFTER---¦
+\*------------------------------------------*/
+.carousel .list .item .content .title::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left:7%; /* Set left to 50% */
+  transform: translateX(-50%); /* Center the pseudo-element */
+  width: 227px;
+  max-width: 227px;
+  height: 5px;
+  transform: skew(-12deg);
+  background: var(--third-color);
+  z-index: 1;
+  box-shadow: 0 5px 10px #000;
+}
+
+
+/*----------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
+\*----------------------------------------*/
+.carousel .list .item .content .sub-title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
+    text-align: center;
+
+}
+
+/*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TOPIC---¦
+\*------------------------------------*/
+.carousel .list .item .content .topic {
+  font-weight: 900;
+  font-size: 25px;
+  letter-spacing: 5px;
+    text-align: center;
+
+}
+
+/*--------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-A-&-DOT---¦
+\*--------------------------------------*/
+.carousel .list .item .content a {
+  color: var(--secondary-color);
+}
+
+.fa-location-dot {
+  color: var(--third-color);
+}
+
+/*----------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-DES---¦
+\*----------------------------------*/
+.carousel .list .item .content .des {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0px;
+  /* padding-right: 30%; */
+    text-align: center;
+
+}
+
+/*------------------------*\
+¦---CAROUSEL-BTN-CLASSES---¦
+\*------------------------*/
+
+.carousel-cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+    text-align: center;
+
+}
+
+.btn {
+  font-size: 15px;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  background-color: var(--third-color);
+  padding: 10px 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   letter-spacing: 3px;
+  border-radius: 10px;
 }
+
+.btn-2 {
+  font-size: 15px;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  background-color: transparent;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+
+/*------------------------------*\
+¦---CAROUSEL-THUMBNAIL-CLASSES---¦
+\*------------------------------*/
+
+.thumbnail {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: max-content;
+  z-index: 2;
+  display: flex;
+  gap: 20px;
+  padding-inline-start: 15px;
+}
+.thumbnail .item {
+  width: 100px;
+  height: 135px;
+  flex-shrink: 0;
+  object-fit: contain;
+  position: relative;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.thumbnail .item img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: var(--secondary-color);
+}
+.thumbnail .item .content .title {
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  color: var(--secondary-color);
+}
+/*----------*\
+¦---ARROWS---¦
+\*----------*/
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Make sure the .arrows div takes the full width */
+  /* max-width: ; */
+  padding-inline: 3px;
+}
+
+.arrows button {
+  /* Add additional styling for your buttons if necessary */
+  margin: 0 10px; /* Adjust the margin to control the space between buttons */
+  
+}
+
+.arrows .button {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 100;
+  font-family: monospace;
+}
+.arrows .button:hover {
+  background-color: var(--secondary-color);
+  color: rgb(0, 0, 0, 0.8);
+}
+
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .content-container,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .sub-title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .carousel-cta-btn {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.carousel .list .item:nth-child(1) .content-container {
+  animation-delay: 1.2s;
+}
+.carousel .list .item:nth-child(1) .title {
+  animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(1) .sub-title {
+  animation-delay: 1.6s;
+}
+.carousel .list .item:nth-child(1) .topic {
+  animation-delay: 1.8s;
+}
+.carousel .list .item:nth-child(1) .des {
+  animation-delay: 2s;
+}
+.carousel .list .item:nth-child(1) .carousel-cta-btn {
+  animation-delay: 2.2s;
+}
+
+/* effect next click */
+
+.carousel.next .list .item:nth-child(1) img {
+  width: 100px;
+  height: 135px;
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  border-radius: 20px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+  to {
+    width: 100px;  }
+}
+
+.carousel.next .thumbnail {
+  transform: translateX(100px);
+  animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* effect prev click */
+.carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+  to {
+    width: 100px;
+    height: 135px;
+    border-radius: 10px;
+    left: 15px;
+    bottom: 35px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+
+.carousel.prev .list .item:nth-child(2) .content-container,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .sub-title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .carousel-cta-btn{
+  animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+  to{
+transform: translateY(-150px);
+filter: blur(20px);
+opacity: 0;
+  }
+}
+
+.carousel.next .arrows .button,
+.carousel.prev .arrows .button{
+  pointer-events: none;
+}
+
+.time{
+  width: 0%;
+  height: 3px;
+  background-color: var(--third-color);
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+  to{
+    width: 0;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 
 /*----------*\
 ¦---FOOTER---¦
@@ -450,6 +850,64 @@ footer {
   text-align: center;
   max-width: 335px;
   margin: 0 auto;
+}
+.grid-container h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/*-----------------------------*\
+¦---FOOTER-H2-AFTER-UNDERLINE---¦
+\*-----------------------------*/
+.h2-after-1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 50%;
+  height: 5px;
+  transform: skew(-12deg) translateX(-50%);
+  background: var(--third-color);
+  z-index: -1;
+}
+.h2-after-2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 105%;
+  height: 5px;
+  transform: skew(-12deg) translateX(-50%);
+  background: var(--third-color);
+  z-index: -1;
+}
+.h2-after-3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 60%;
+  height: 5px;
+  transform: skew(-12deg) translateX(-50%);
+  background: var(--third-color);
+  z-index: -1;
+}
+.h2-after-4::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 75%;
+  height: 5px;
+  transform: skew(-12deg) translateX(-50%);
+  background: var(--third-color);
+  z-index: -1;
+}
+
+.h2-footer-title:nth-of-type(2),
+.h2-footer-title:nth-of-type(3)::after {
+  content: "";
+  width: 100%;
 }
 
 /*----------------------*\
@@ -550,6 +1008,92 @@ footer {
   padding: 20px;
 }
 
+
+@media (min-width: 390px) {
+
+  /*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE---¦
+\*------------------------------------*/
+  .carousel .list .item .content .title {
+    font-size: 50px;
+  }
+
+  
+/*------------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE-AFTER---¦
+\*------------------------------------------*/
+.carousel .list .item .content .title::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left:0; /* Set left to 50% */
+  transform: translateX(-50%); /* Center the pseudo-element */
+  width: 267px;
+  max-width: 267px;
+  height: 5px;
+  transform: skew(-12deg);
+  background: var(--third-color);
+  z-index: 1;
+  box-shadow: 0 5px 10px #000;
+}
+
+  /*----------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
+\*----------------------------------------*/
+.carousel .list .item .content .sub-title {
+  font-size: 25px;
+}
+
+/*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TOPIC---¦
+\*------------------------------------*/
+.carousel .list .item .content .topic {
+  font-size: 30px;
+}
+
+/*----------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-DES---¦
+\*----------------------------------*/
+.carousel .list .item .content .des {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0px;
+  /* padding-right: 30%; */
+}
+
+.carousel .list .item .content-container {
+  background-color: rgb(29, 27, 28, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+/*------------------------------*\
+¦---CAROUSEL-THUMBNAIL-CLASSES---¦
+\*------------------------------*/
+
+.thumbnail {
+  bottom: 70px;
+}
+
+@keyframes outImage {
+  to {
+    width: 100px;
+    height: 135px;
+    border-radius: 10px;
+    left: 15px;
+    bottom: 70px;
+  }
+}
+
+.carousel.next .list .item:nth-child(1) img {
+
+  bottom: 70px;
+
+}
+}
+ 
+
 /*----------------------*\
 ¦----NAVBAR-ICON-SWITCH--¦
 \*----------------------*/
@@ -570,6 +1114,14 @@ footer {
   .book-icon {
     display: block;
   }
+
+
+
+
+
+
+
+
 }
 
 /*--------------------------------------------*\
@@ -649,10 +1201,131 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  /*-----------------------------*\
+¦---FOOTER-H2-AFTER-UNDERLINE---¦
+\*-----------------------------*/
+  .h2-after-1::after {
+    width: 35%;
+  }
+  .h2-after-2::after {
+    width: 75%;
+  }
+  .h2-after-3::after {
+    width: 40%;
+  }
+  .h2-after-4::after {
+    width: 50%;
+  }
+
+    /*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE---¦
+\*------------------------------------*/
+.carousel .list .item .content .title {
+  font-size: 70px;
+}
+
+
+/*------------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TITLE-AFTER---¦
+\*------------------------------------------*/
+.carousel .list .item .content .title::after {
+  content: "";
+  top: 70px;
+  left: 167px;
+  width: 350px;
+  max-width: 390px;
+
+}
+
+/*----------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-SUB-TITLE---¦
+\*----------------------------------------*/
+.carousel .list .item .content .sub-title {
+font-size: 35px;
+
+}
+
+/*------------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-TOPIC---¦
+\*------------------------------------*/
+.carousel .list .item .content .topic {
+font-size: 40px;
+
+}
+
+/*----------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT-DES---¦
+\*----------------------------------*/
+.carousel .list .item .content .des {
+font-weight: 500;
+font-size: 25px;
+letter-spacing: 0px;
+/* padding-right: 30%; */
+
+}
+
+/*------------------------*\
+¦---CAROUSEL-BTN-CLASSES---¦
+\*------------------------*/
+
+.carousel-cta-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+
+/*------------------------------*\
+¦---CAROUSEL-THUMBNAIL-CLASSES---¦
+\*------------------------------*/
+
+.thumbnail {
+  position: absolute;
+  bottom: 40px;
+  left: 15%;
+  width: max-content;
+  z-index: 2;
+  display: flex;
+  gap: 20px;
+}
+.thumbnail .item {
+  width: 160px;
+  height: 220px;
+  flex-shrink: 0;
+  object-fit: contain;
+  position: relative;
+}
+
+@keyframes showThumbnail {
+  to {
+    width: 160px;
+  }
+}
+
+@keyframes outImage {
+  to {
+    width: 160px;
+    height: 220px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 40px;
+  }
+}
+
+
 }
 
 /* Laptop / Desktop Screen Size */
 @media (min-width: 1000px) {
+  /*--------*\
+¦---HERO---¦
+\*--------*/
+  .hero {
+    background-position: center right;
+  }
   /*-----------------------------*\
 ¦-----STICKY-DESKTOP-HEADER-----¦
 \*-----------------------------*/
@@ -662,7 +1335,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     transition: all 300ms ease-in-out;
     top: 90px;
     background-color: var(--third-color);
@@ -708,7 +1381,11 @@ footer {
     /* margin-left: auto; */
     order: -1;
   }
-/*----------------*\
+
+  .logo {
+    margin: 0 auto;
+  }
+  /*----------------*\
 ¦----HEADER-BTN----¦
 \*----------------*/
   .buttons {
@@ -730,15 +1407,14 @@ footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
   }
-  
-/*---------------------*\
+
+  /*---------------------*\
 ¦-----HOVER-CLASSES-----¦
 \*---------------------*/
-  
-.header-btn:hover {
+
+  .header-btn:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
-
   }
 
   .btn-2:hover {
@@ -810,9 +1486,17 @@ footer {
   .navbar-list-item.active {
     background-color: var(--secondary-color);
   }
-  
+
   .navbar-list-item a.active {
     color: var(--primary-color);
+  }
+
+  .arrows {
+  
+    position: absolute;
+    bottom: 130px;
+    right: 55%;
+  
   }
 }
 
@@ -821,6 +1505,32 @@ footer {
     max-width: 768px;
     margin: 0 auto;
   }
+
+  .thumbnail {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+  }
+
+    /*------------------------------*\
+¦---CAROUSEL-LIST-ITEM-CONTENT---¦
+\*------------------------------*/
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 550px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+}
+  
 }
 
 /* Large Laptop / Desktop Screen Size */
@@ -898,9 +1608,6 @@ footer {
   .footer-wrapper .container {
     padding-inline: 0;
   }
-  .container {
-    padding-inline: 0;
-  }
 
   .top-header.container {
     margin: 0 auto;
@@ -918,6 +1625,14 @@ footer {
   .navbar-list-item i {
     width: auto;
   }
+
+  
+
+ .arrows {
+  position: absolute;
+  bottom: 130px;
+  right: 55%;
+}
 }
 
 /*  Deskstop Screen Size */
