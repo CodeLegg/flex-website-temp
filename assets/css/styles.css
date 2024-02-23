@@ -1072,9 +1072,9 @@ footer {
 ¦---CAROUSEL-THUMBNAIL-CLASSES---¦
 \*------------------------------*/
 
-/* .thumbnail {
+.thumbnail {
   bottom: 70px;
-} */
+}
 
 @keyframes outImage {
   to {
