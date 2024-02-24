@@ -1061,7 +1061,7 @@ footer {
 \*------------------------------*/
 
   .thumbnail {
-    bottom: 2px;
+    bottom: 0px;
   }
 
   @keyframes outImage {
